@@ -1,0 +1,36 @@
+[2024-10-08T22:25:12.967+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-08T22:25:12.986+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_004.run_extract_container_E2 manual__2024-10-08T21:51:57.135226+00:00 [queued]>
+[2024-10-08T22:25:12.995+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_004.run_extract_container_E2 manual__2024-10-08T21:51:57.135226+00:00 [queued]>
+[2024-10-08T22:25:12.995+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 8
+[2024-10-08T22:25:13.008+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_extract_container_E2> on 2024-10-08 21:51:57.135226+00:00
+[2024-10-08T22:25:13.018+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1622) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T22:25:13.019+0000] {standard_task_runner.py:72} INFO - Started process 1631 to run task
+[2024-10-08T22:25:13.019+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_004', 'run_extract_container_E2', 'manual__2024-10-08T21:51:57.135226+00:00', '--job-id', '126', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmpri__vbxr']
+[2024-10-08T22:25:13.020+0000] {standard_task_runner.py:105} INFO - Job 126: Subtask run_extract_container_E2
+[2024-10-08T22:25:13.066+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_004.run_extract_container_E2 manual__2024-10-08T21:51:57.135226+00:00 [running]> on host a4706156eccf
+[2024-10-08T22:25:13.167+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_004' AIRFLOW_CTX_TASK_ID='run_extract_container_E2' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T21:51:57.135226+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T21:51:57.135226+00:00'
+[2024-10-08T22:25:13.168+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-08T22:25:13.189+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-08T22:25:13.192+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-08T22:29:42.379+0000] {docker.py:438} INFO - End of process...
+[2024-10-08T22:29:42.380+0000] {docker.py:438} INFO -         Category                       Name  ...    Date_First   Like_First
+[2024-10-08T22:29:42.381+0000] {docker.py:438} INFO - 0        Romance     No Marriage is Perfect  ...  Aug 10, 2022   like78,491
+[2024-10-08T22:29:42.381+0000] {docker.py:438} INFO - 1        Romance  So I Married the Anti-Fan  ...  May 13, 2021   like94,031
+[2024-10-08T22:29:42.381+0000] {docker.py:438} INFO - 2        Fantasy   Rewriting the Villainess  ...   Apr 7, 2022   like79,128
+[2024-10-08T22:29:42.381+0000] {docker.py:438} INFO - 3         Horror          Surviving Romance  ...  Apr 14, 2021  like116,815
+[2024-10-08T22:29:42.381+0000] {docker.py:438} INFO - 4         Action  Hardcore Leveling Warrior  ...   Nov 7, 2017  like101,442
+[2024-10-08T22:29:42.382+0000] {docker.py:438} INFO - ..           ...                        ...  ...           ...          ...
+[2024-10-08T22:29:42.382+0000] {docker.py:438} INFO - 68       Romance          Romantic Graffiti  ...   Mar 1, 2023   like18,395
+[2024-10-08T22:29:42.382+0000] {docker.py:438} INFO - 69        Sci-fi          Miracle Simulator  ...  Jul 17, 2024    like3,487
+[2024-10-08T22:29:42.382+0000] {docker.py:438} INFO - 70  Supernatural             Devil Number 4  ...   Aug 8, 2019  like216,224
+[2024-10-08T22:29:42.382+0000] {docker.py:438} INFO - 71       Fantasy                  God Tribe  ...   Jun 8, 2022   like22,251
+[2024-10-08T22:29:42.383+0000] {docker.py:438} INFO - 72         Drama             She's Hopeless  ...  May 14, 2021  like154,082
+[2024-10-08T22:29:42.383+0000] {docker.py:438} INFO - 
+[2024-10-08T22:29:42.383+0000] {docker.py:438} INFO - [73 rows x 9 columns]
+[2024-10-08T22:29:42.882+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-08T22:29:42.883+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_004, task_id=run_extract_container_E2, run_id=manual__2024-10-08T21:51:57.135226+00:00, execution_date=20241008T215157, start_date=20241008T222512, end_date=20241008T222942
+[2024-10-08T22:29:42.921+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-08T22:29:42.967+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-08T22:29:42.972+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

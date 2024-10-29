@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  spark-master:
+    image: spark-jupyter-cluster
+    container_name: spark-master
+    hostname: spark-master
+    ports:
+      - "7077:7077"
+      - "8090:8080"
+    volumes:
+      - ./data:/data  # Mounts the local 'data' directory to '/data' in the container
+    networks:
+      - spark-network
+      - etl_default
+      - mysql_phpmyadmin_default
+    restart: always
+
+  spark-worker:
+    image: spark-jupyter-cluster
+    container_name: spark-worker
+    hostname: spark-worker
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+    depends_on:
+      - spark-master
+    volumes:
+      - ./data:/data  # Mounts the local 'data' directory to '/data' in the container
+    networks:
+      - spark-network
+      - etl_default
+      - mysql_phpmyadmin_default
+    restart: always
+
+  jupyter:
+    image: spark-jupyter-cluster
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/data  # Mounts the local 'data' directory to '/data' in the container
+    networks:
+      - spark-network
+      - etl_default
+      - mysql_phpmyadmin_default
+    restart: always
+
+networks:
+  spark-network:
+    driver: bridge
+  # etl_default:
+  #   external: true 
+  # mysql_phpmyadmin_default:
+  #   external: true 

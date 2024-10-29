@@ -1,0 +1,22 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  hadoop-pyspark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hadoop-pyspark-jupyter
+    ports:
+      - "8888:8888"  # Jupyter Notebook
+      - "9870:9870" # Hadoop NameNode UI
+      - "8088:8088"   # Hadoop ResourceManager UI
+      - "4040:4040"   # Spark UI
+      - "7077:7077"
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+      - pyspark_spark_hadoop:/app
+
+volumes:
+  pyspark_spark_hadoop:  # Defining the named volume

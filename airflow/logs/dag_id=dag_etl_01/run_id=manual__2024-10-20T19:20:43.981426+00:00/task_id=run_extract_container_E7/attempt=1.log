@@ -1,0 +1,36 @@
+[2024-10-20T19:26:25.049+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-20T19:26:25.072+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_01.run_extract_container_E7 manual__2024-10-20T19:20:43.981426+00:00 [queued]>
+[2024-10-20T19:26:25.086+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_01.run_extract_container_E7 manual__2024-10-20T19:20:43.981426+00:00 [queued]>
+[2024-10-20T19:26:25.086+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-10-20T19:26:25.103+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_extract_container_E7> on 2024-10-20 19:20:43.981426+00:00
+[2024-10-20T19:26:25.116+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1204) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-20T19:26:25.118+0000] {standard_task_runner.py:72} INFO - Started process 1210 to run task
+[2024-10-20T19:26:25.119+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_01', 'run_extract_container_E7', 'manual__2024-10-20T19:20:43.981426+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmp4nixzfdx']
+[2024-10-20T19:26:25.120+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask run_extract_container_E7
+[2024-10-20T19:26:25.185+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_01.run_extract_container_E7 manual__2024-10-20T19:20:43.981426+00:00 [running]> on host b3fe089e5ee6
+[2024-10-20T19:26:25.291+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_01' AIRFLOW_CTX_TASK_ID='run_extract_container_E7' AIRFLOW_CTX_EXECUTION_DATE='2024-10-20T19:20:43.981426+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-20T19:20:43.981426+00:00'
+[2024-10-20T19:26:25.292+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-20T19:26:25.328+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-20T19:26:25.333+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-20T19:33:26.328+0000] {docker.py:438} INFO - End of process...
+[2024-10-20T19:33:26.330+0000] {docker.py:438} INFO -          Category  ...   Like_First
+[2024-10-20T19:33:26.331+0000] {docker.py:438} INFO - 0           Drama  ...   like10,802
+[2024-10-20T19:33:26.332+0000] {docker.py:438} INFO - 1        Thriller  ...   like42,684
+[2024-10-20T19:33:26.332+0000] {docker.py:438} INFO - 2   Slice of life  ...    like3,547
+[2024-10-20T19:33:26.333+0000] {docker.py:438} INFO - 3         Fantasy  ...   like19,396
+[2024-10-20T19:33:26.333+0000] {docker.py:438} INFO - 4         Fantasy  ...   like36,735
+[2024-10-20T19:33:26.334+0000] {docker.py:438} INFO - ..            ...  ...          ...
+[2024-10-20T19:33:26.335+0000] {docker.py:438} INFO - 72         Action  ...    like6,987
+[2024-10-20T19:33:26.335+0000] {docker.py:438} INFO - 73        Fantasy  ...  like116,272
+[2024-10-20T19:33:26.336+0000] {docker.py:438} INFO - 74        Fantasy  ...   like47,265
+[2024-10-20T19:33:26.336+0000] {docker.py:438} INFO - 75         Comedy  ...   like20,694
+[2024-10-20T19:33:26.337+0000] {docker.py:438} INFO - 76         Comedy  ...   like33,127
+[2024-10-20T19:33:26.337+0000] {docker.py:438} INFO - 
+[2024-10-20T19:33:26.338+0000] {docker.py:438} INFO - [77 rows x 9 columns]
+[2024-10-20T19:33:27.130+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-20T19:33:27.130+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_01, task_id=run_extract_container_E7, run_id=manual__2024-10-20T19:20:43.981426+00:00, execution_date=20241020T192043, start_date=20241020T192625, end_date=20241020T193327
+[2024-10-20T19:33:27.172+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-20T19:33:27.212+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-20T19:33:27.215+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

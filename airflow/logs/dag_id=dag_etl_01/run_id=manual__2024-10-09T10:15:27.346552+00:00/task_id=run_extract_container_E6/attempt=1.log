@@ -1,0 +1,36 @@
+[2024-10-09T10:20:11.347+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-09T10:20:11.362+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_01.run_extract_container_E6 manual__2024-10-09T10:15:27.346552+00:00 [queued]>
+[2024-10-09T10:20:11.370+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_01.run_extract_container_E6 manual__2024-10-09T10:15:27.346552+00:00 [queued]>
+[2024-10-09T10:20:11.371+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-10-09T10:20:11.384+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_extract_container_E6> on 2024-10-09 10:15:27.346552+00:00
+[2024-10-09T10:20:11.391+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=421) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-09T10:20:11.392+0000] {standard_task_runner.py:72} INFO - Started process 428 to run task
+[2024-10-09T10:20:11.393+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_01', 'run_extract_container_E6', 'manual__2024-10-09T10:15:27.346552+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmpg4ri1gy4']
+[2024-10-09T10:20:11.394+0000] {standard_task_runner.py:105} INFO - Job 143: Subtask run_extract_container_E6
+[2024-10-09T10:20:11.436+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_01.run_extract_container_E6 manual__2024-10-09T10:15:27.346552+00:00 [running]> on host a4706156eccf
+[2024-10-09T10:20:11.533+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_01' AIRFLOW_CTX_TASK_ID='run_extract_container_E6' AIRFLOW_CTX_EXECUTION_DATE='2024-10-09T10:15:27.346552+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-09T10:15:27.346552+00:00'
+[2024-10-09T10:20:11.534+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-09T10:20:11.555+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-09T10:20:11.559+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-09T10:24:51.412+0000] {docker.py:438} INFO - End of process...
+[2024-10-09T10:24:51.413+0000] {docker.py:438} INFO -       Category                   Name  ...    Date_First  Like_First
+[2024-10-09T10:24:51.413+0000] {docker.py:438} INFO - 0       Comedy          Heavenly Eats  ...   Jul 1, 2022  like17,423
+[2024-10-09T10:24:51.414+0000] {docker.py:438} INFO - 1     Thriller  Pie Game (The 8 Show)  ...  Aug 29, 2023   like2,530
+[2024-10-09T10:24:51.414+0000] {docker.py:438} INFO - 2        Drama          Ghost Theater  ...  Feb 23, 2020  like67,714
+[2024-10-09T10:24:51.414+0000] {docker.py:438} INFO - 3      Fantasy          The Wendybird  ...  Mar 20, 2021  like47,430
+[2024-10-09T10:24:51.414+0000] {docker.py:438} INFO - 4     Thriller                  Grasp  ...  Jul 25, 2021  like13,187
+[2024-10-09T10:24:51.415+0000] {docker.py:438} INFO - ..         ...                    ...  ...           ...         ...
+[2024-10-09T10:24:51.415+0000] {docker.py:438} INFO - 68       Drama     The Artist Salieri  ...   Jun 1, 2023   like2,557
+[2024-10-09T10:24:51.415+0000] {docker.py:438} INFO - 69  Historical  The Weight of Our Sky  ...   Oct 9, 2019  like46,405
+[2024-10-09T10:24:51.415+0000] {docker.py:438} INFO - 70     Fantasy  Corpse Knight Gunther  ...  Jan 21, 2023  like19,339
+[2024-10-09T10:24:51.416+0000] {docker.py:438} INFO - 71       Drama       The Golden Spoon  ...  Jul 19, 2021  like10,800
+[2024-10-09T10:24:51.416+0000] {docker.py:438} INFO - 72      Action           The Retreats  ...  Jan 30, 2022   like5,777
+[2024-10-09T10:24:51.416+0000] {docker.py:438} INFO - 
+[2024-10-09T10:24:51.417+0000] {docker.py:438} INFO - [73 rows x 9 columns]
+[2024-10-09T10:24:51.989+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-09T10:24:51.989+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_01, task_id=run_extract_container_E6, run_id=manual__2024-10-09T10:15:27.346552+00:00, execution_date=20241009T101527, start_date=20241009T102011, end_date=20241009T102451
+[2024-10-09T10:24:52.021+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-09T10:24:52.061+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-09T10:24:52.063+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

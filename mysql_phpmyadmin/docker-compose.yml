@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      # MYSQL_DATABASE: example_db
+      # MYSQL_USER: example_user
+      # MYSQL_PASSWORD: example_pass
+    volumes:
+      - mysql_data:/var/lib/mysql  # Adds a volume for persistent storage
+
+  phpmyadmin: 
+    image: phpmyadmin
+    depends_on: 
+      - db
+    restart: always
+    ports:
+      - 6060:80
+    environment:
+      - PMA_ARBITRARY=1
+
+volumes:
+  mysql_data:  # Defines the volume

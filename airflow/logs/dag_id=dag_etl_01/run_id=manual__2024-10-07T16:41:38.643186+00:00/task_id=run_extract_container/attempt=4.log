@@ -1,0 +1,30 @@
+[2024-10-07T16:52:59.513+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-07T16:52:59.530+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_01.run_extract_container manual__2024-10-07T16:41:38.643186+00:00 [queued]>
+[2024-10-07T16:52:59.537+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_01.run_extract_container manual__2024-10-07T16:41:38.643186+00:00 [queued]>
+[2024-10-07T16:52:59.538+0000] {taskinstance.py:2865} INFO - Starting attempt 4 of 9
+[2024-10-07T16:52:59.549+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_extract_container> on 2024-10-07 16:41:38.643186+00:00
+[2024-10-07T16:52:59.557+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=272) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T16:52:59.558+0000] {standard_task_runner.py:72} INFO - Started process 273 to run task
+[2024-10-07T16:52:59.558+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_01', 'run_extract_container', 'manual__2024-10-07T16:41:38.643186+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmpt6kl_u5b']
+[2024-10-07T16:52:59.559+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask run_extract_container
+[2024-10-07T16:52:59.602+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_01.run_extract_container manual__2024-10-07T16:41:38.643186+00:00 [running]> on host 0e4020a450e4
+[2024-10-07T16:52:59.683+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_01' AIRFLOW_CTX_TASK_ID='run_extract_container' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T16:41:38.643186+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-07T16:41:38.643186+00:00'
+[2024-10-07T16:52:59.683+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-07T16:52:59.705+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-07T16:52:59.708+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-07T16:53:22.603+0000] {docker.py:438} INFO - End of process...
+[2024-10-07T16:53:22.604+0000] {docker.py:438} INFO -   Category                         Name  ...    Date_First   Like_First
+[2024-10-07T16:53:22.604+0000] {docker.py:438} INFO - 0  Romance                 Lore Olympus  ...   Mar 4, 2018  like405,334
+[2024-10-07T16:53:22.605+0000] {docker.py:438} INFO - 1  Romance  The Male Lead's Girl Friend  ...  Sep 13, 2021   like70,774
+[2024-10-07T16:53:22.605+0000] {docker.py:438} INFO - 2    Drama              I Don't Hate Us  ...  Sep 23, 2023   like20,081
+[2024-10-07T16:53:22.605+0000] {docker.py:438} INFO - 3  Romance             Marry My Husband  ...  Aug 29, 2022  like219,930
+[2024-10-07T16:53:22.606+0000] {docker.py:438} INFO - 4  Romance      See You in My 19th Life  ...  Dec 17, 2020  like188,125
+[2024-10-07T16:53:22.606+0000] {docker.py:438} INFO - 
+[2024-10-07T16:53:22.606+0000] {docker.py:438} INFO - [5 rows x 9 columns]
+[2024-10-07T16:53:22.987+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-07T16:53:22.987+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_01, task_id=run_extract_container, run_id=manual__2024-10-07T16:41:38.643186+00:00, execution_date=20241007T164138, start_date=20241007T165259, end_date=20241007T165322
+[2024-10-07T16:53:23.040+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-07T16:53:23.056+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T16:53:23.057+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

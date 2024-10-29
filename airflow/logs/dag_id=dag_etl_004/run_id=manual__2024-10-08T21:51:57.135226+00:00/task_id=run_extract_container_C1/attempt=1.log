@@ -1,0 +1,32 @@
+[2024-10-08T22:05:06.656+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-08T22:05:06.674+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_004.run_extract_container_C1 manual__2024-10-08T21:51:57.135226+00:00 [queued]>
+[2024-10-08T22:05:06.682+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_004.run_extract_container_C1 manual__2024-10-08T21:51:57.135226+00:00 [queued]>
+[2024-10-08T22:05:06.682+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-10-08T22:05:06.694+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_extract_container_C1> on 2024-10-08 21:51:57.135226+00:00
+[2024-10-08T22:05:06.700+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1312) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T22:05:06.701+0000] {standard_task_runner.py:72} INFO - Started process 1313 to run task
+[2024-10-08T22:05:06.702+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_004', 'run_extract_container_C1', 'manual__2024-10-08T21:51:57.135226+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmpgcyiw2z6']
+[2024-10-08T22:05:06.703+0000] {standard_task_runner.py:105} INFO - Job 106: Subtask run_extract_container_C1
+[2024-10-08T22:05:06.742+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_004.run_extract_container_C1 manual__2024-10-08T21:51:57.135226+00:00 [running]> on host a4706156eccf
+[2024-10-08T22:05:06.811+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_004' AIRFLOW_CTX_TASK_ID='run_extract_container_C1' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T21:51:57.135226+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T21:51:57.135226+00:00'
+[2024-10-08T22:05:06.812+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-08T22:05:06.832+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-08T22:05:06.834+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-08T22:05:07.456+0000] {docker.py:438} INFO - data0.csv not found. Skipping.
+[2024-10-08T22:05:07.457+0000] {docker.py:438} INFO - data1.csv not found. Skipping.
+[2024-10-08T22:05:07.457+0000] {docker.py:438} INFO - data2.csv not found. Skipping.
+[2024-10-08T22:05:07.457+0000] {docker.py:438} INFO - data3.csv not found. Skipping.
+[2024-10-08T22:05:07.457+0000] {docker.py:438} INFO - data4.csv not found. Skipping.
+[2024-10-08T22:05:07.458+0000] {docker.py:438} INFO - data5.csv not found. Skipping.
+[2024-10-08T22:05:07.458+0000] {docker.py:438} INFO - data6.csv not found. Skipping.
+[2024-10-08T22:05:07.458+0000] {docker.py:438} INFO - data7.csv not found. Skipping.
+[2024-10-08T22:05:07.458+0000] {docker.py:438} INFO - data8.csv not found. Skipping.
+[2024-10-08T22:05:07.458+0000] {docker.py:438} INFO - data9.csv not found. Skipping.
+[2024-10-08T22:05:07.459+0000] {docker.py:438} INFO - No data files found to concatenate.
+[2024-10-08T22:05:07.834+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-08T22:05:07.835+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_004, task_id=run_extract_container_C1, run_id=manual__2024-10-08T21:51:57.135226+00:00, execution_date=20241008T215157, start_date=20241008T220506, end_date=20241008T220507
+[2024-10-08T22:05:07.879+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-08T22:05:07.904+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-08T22:05:07.905+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

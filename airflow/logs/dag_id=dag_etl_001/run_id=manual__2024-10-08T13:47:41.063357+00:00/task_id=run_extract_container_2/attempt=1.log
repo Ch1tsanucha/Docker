@@ -1,0 +1,74 @@
+[2024-10-08T15:08:50.351+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-08T15:08:50.368+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_001.run_extract_container_2 manual__2024-10-08T13:47:41.063357+00:00 [queued]>
+[2024-10-08T15:08:50.376+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_001.run_extract_container_2 manual__2024-10-08T13:47:41.063357+00:00 [queued]>
+[2024-10-08T15:08:50.376+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-10-08T15:08:50.388+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_extract_container_2> on 2024-10-08 13:47:41.063357+00:00
+[2024-10-08T15:08:50.395+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=138) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T15:08:50.396+0000] {standard_task_runner.py:72} INFO - Started process 139 to run task
+[2024-10-08T15:08:50.397+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_001', 'run_extract_container_2', 'manual__2024-10-08T13:47:41.063357+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmpahzj6r3b']
+[2024-10-08T15:08:50.398+0000] {standard_task_runner.py:105} INFO - Job 66: Subtask run_extract_container_2
+[2024-10-08T15:08:50.440+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_001.run_extract_container_2 manual__2024-10-08T13:47:41.063357+00:00 [running]> on host a4706156eccf
+[2024-10-08T15:08:50.513+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_001' AIRFLOW_CTX_TASK_ID='run_extract_container_2' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T13:47:41.063357+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T13:47:41.063357+00:00'
+[2024-10-08T15:08:50.514+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-08T15:08:50.532+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-08T15:08:50.535+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-08T15:08:51.181+0000] {docker.py:438} INFO - Category  ... Like_First
+[2024-10-08T15:08:51.181+0000] {docker.py:438} INFO - 0        Romance  ...     405350
+[2024-10-08T15:08:51.181+0000] {docker.py:438} INFO - 1        Romance  ...      70782
+[2024-10-08T15:08:51.181+0000] {docker.py:438} INFO - 2          Drama  ...      20088
+[2024-10-08T15:08:51.182+0000] {docker.py:438} INFO - 3        Romance  ...     219944
+[2024-10-08T15:08:51.182+0000] {docker.py:438} INFO - 4        Romance  ...     188135
+[2024-10-08T15:08:51.183+0000] {docker.py:438} INFO - 5        Romance  ...     127243
+[2024-10-08T15:08:51.183+0000] {docker.py:438} INFO - 6        Romance  ...      46338
+[2024-10-08T15:08:51.183+0000] {docker.py:438} INFO - 7        Romance  ...      57171
+[2024-10-08T15:08:51.183+0000] {docker.py:438} INFO - 8        Romance  ...     499629
+[2024-10-08T15:08:51.183+0000] {docker.py:438} INFO - 9          Drama  ...     127786
+[2024-10-08T15:08:51.184+0000] {docker.py:438} INFO - 10       Fantasy  ...     260420
+[2024-10-08T15:08:51.184+0000] {docker.py:438} INFO - 11         Drama  ...      73383
+[2024-10-08T15:08:51.184+0000] {docker.py:438} INFO - 12       Romance  ...     176035
+[2024-10-08T15:08:51.184+0000] {docker.py:438} INFO - 13       Fantasy  ...     161112
+[2024-10-08T15:08:51.184+0000] {docker.py:438} INFO - 14       Romance  ...     186939
+[2024-10-08T15:08:51.185+0000] {docker.py:438} INFO - 15       Romance  ...      30741
+[2024-10-08T15:08:51.185+0000] {docker.py:438} INFO - 16         Drama  ...      43134
+[2024-10-08T15:08:51.185+0000] {docker.py:438} INFO - 17       Romance  ...     247670
+[2024-10-08T15:08:51.185+0000] {docker.py:438} INFO - 18      Thriller  ...     177960
+[2024-10-08T15:08:51.185+0000] {docker.py:438} INFO - 19       Romance  ...     183763
+[2024-10-08T15:08:51.186+0000] {docker.py:438} INFO - 20        Sports  ...     172060
+[2024-10-08T15:08:51.186+0000] {docker.py:438} INFO - 21        Comedy  ...     229514
+[2024-10-08T15:08:51.186+0000] {docker.py:438} INFO - 22       Romance  ...      27522
+[2024-10-08T15:08:51.186+0000] {docker.py:438} INFO - 23        Comedy  ...     180183
+[2024-10-08T15:08:51.186+0000] {docker.py:438} INFO - 24       Fantasy  ...     121795
+[2024-10-08T15:08:51.186+0000] {docker.py:438} INFO - 25       Romance  ...      73870
+[2024-10-08T15:08:51.187+0000] {docker.py:438} INFO - 26       Romance  ...     178164
+[2024-10-08T15:08:51.187+0000] {docker.py:438} INFO - 27        Action  ...     154223
+[2024-10-08T15:08:51.187+0000] {docker.py:438} INFO - 28       Romance  ...      87018
+[2024-10-08T15:08:51.187+0000] {docker.py:438} INFO - 29       Romance  ...      92132
+[2024-10-08T15:08:51.187+0000] {docker.py:438} INFO - 30       Romance  ...     148114
+[2024-10-08T15:08:51.188+0000] {docker.py:438} INFO - 31       Fantasy  ...     115379
+[2024-10-08T15:08:51.188+0000] {docker.py:438} INFO - 32       Romance  ...      87747
+[2024-10-08T15:08:51.188+0000] {docker.py:438} INFO - 33       Romance  ...     316022
+[2024-10-08T15:08:51.188+0000] {docker.py:438} INFO - 34       Romance  ...      29819
+[2024-10-08T15:08:51.188+0000] {docker.py:438} INFO - 35      Thriller  ...     283660
+[2024-10-08T15:08:51.188+0000] {docker.py:438} INFO - 36       Romance  ...      96396
+[2024-10-08T15:08:51.189+0000] {docker.py:438} INFO - 37       Romance  ...      27674
+[2024-10-08T15:08:51.189+0000] {docker.py:438} INFO - 38       Fantasy  ...      22432
+[2024-10-08T15:08:51.189+0000] {docker.py:438} INFO - 39       Romance  ...      56571
+[2024-10-08T15:08:51.189+0000] {docker.py:438} INFO - 40       Romance  ...     115086
+[2024-10-08T15:08:51.189+0000] {docker.py:438} INFO - 41        Comedy  ...     211180
+[2024-10-08T15:08:51.190+0000] {docker.py:438} INFO - 42       Fantasy  ...     191563
+[2024-10-08T15:08:51.190+0000] {docker.py:438} INFO - 43       Romance  ...     127434
+[2024-10-08T15:08:51.190+0000] {docker.py:438} INFO - 44       Romance  ...      87318
+[2024-10-08T15:08:51.190+0000] {docker.py:438} INFO - 45       Fantasy  ...     105239
+[2024-10-08T15:08:51.190+0000] {docker.py:438} INFO - 46       Romance  ...      32080
+[2024-10-08T15:08:51.190+0000] {docker.py:438} INFO - 47       Romance  ...     190596
+[2024-10-08T15:08:51.191+0000] {docker.py:438} INFO - 48        Action  ...      56162
+[2024-10-08T15:08:51.191+0000] {docker.py:438} INFO - 49  Supernatural  ...     112509
+[2024-10-08T15:08:51.191+0000] {docker.py:438} INFO - 
+[2024-10-08T15:08:51.191+0000] {docker.py:438} INFO - [50 rows x 9 columns]
+[2024-10-08T15:08:51.473+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-08T15:08:51.473+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_001, task_id=run_extract_container_2, run_id=manual__2024-10-08T13:47:41.063357+00:00, execution_date=20241008T134741, start_date=20241008T150850, end_date=20241008T150851
+[2024-10-08T15:08:51.493+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-08T15:08:51.512+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-08T15:08:51.513+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

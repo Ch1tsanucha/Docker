@@ -1,0 +1,26 @@
+[2024-10-09T10:29:11.178+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-09T10:29:11.195+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_01.run_load_container_L manual__2024-10-09T10:15:27.346552+00:00 [queued]>
+[2024-10-09T10:29:11.204+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_01.run_load_container_L manual__2024-10-09T10:15:27.346552+00:00 [queued]>
+[2024-10-09T10:29:11.205+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-10-09T10:29:11.221+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_load_container_L> on 2024-10-09 10:15:27.346552+00:00
+[2024-10-09T10:29:11.229+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=554) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-09T10:29:11.231+0000] {standard_task_runner.py:72} INFO - Started process 555 to run task
+[2024-10-09T10:29:11.231+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_01', 'run_load_container_L', 'manual__2024-10-09T10:15:27.346552+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmp1dh2howj']
+[2024-10-09T10:29:11.232+0000] {standard_task_runner.py:105} INFO - Job 149: Subtask run_load_container_L
+[2024-10-09T10:29:11.271+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_01.run_load_container_L manual__2024-10-09T10:15:27.346552+00:00 [running]> on host a4706156eccf
+[2024-10-09T10:29:11.347+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_01' AIRFLOW_CTX_TASK_ID='run_load_container_L' AIRFLOW_CTX_EXECUTION_DATE='2024-10-09T10:15:27.346552+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-09T10:15:27.346552+00:00'
+[2024-10-09T10:29:11.348+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-09T10:29:11.367+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-09T10:29:11.370+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-09T10:29:12.059+0000] {docker.py:438} INFO - Connection established.
+[2024-10-09T10:29:12.059+0000] {docker.py:438} INFO - Old table 'webtoon' deleted if it existed.
+[2024-10-09T10:29:12.060+0000] {docker.py:438} INFO - Table 'webtoon' created successfully.
+[2024-10-09T10:29:12.060+0000] {docker.py:438} INFO - Inserted 730 rows into 'webtoon' table.
+[2024-10-09T10:29:12.060+0000] {docker.py:438} INFO - Connection closed.
+[2024-10-09T10:29:12.306+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-09T10:29:12.306+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_01, task_id=run_load_container_L, run_id=manual__2024-10-09T10:15:27.346552+00:00, execution_date=20241009T101527, start_date=20241009T102911, end_date=20241009T102912
+[2024-10-09T10:29:12.327+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-09T10:29:12.344+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-09T10:29:12.345+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,36 @@
+[2024-10-26T22:17:55.684+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-26T22:17:55.702+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_01.run_extract_container_E10 manual__2024-10-26T22:12:23.442491+00:00 [queued]>
+[2024-10-26T22:17:55.712+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_01.run_extract_container_E10 manual__2024-10-26T22:12:23.442491+00:00 [queued]>
+[2024-10-26T22:17:55.712+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-10-26T22:17:55.733+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_extract_container_E10> on 2024-10-26 22:12:23.442491+00:00
+[2024-10-26T22:17:55.744+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1052) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-26T22:17:55.746+0000] {standard_task_runner.py:72} INFO - Started process 1059 to run task
+[2024-10-26T22:17:55.746+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_01', 'run_extract_container_E10', 'manual__2024-10-26T22:12:23.442491+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmp1edkt0ad']
+[2024-10-26T22:17:55.747+0000] {standard_task_runner.py:105} INFO - Job 59: Subtask run_extract_container_E10
+[2024-10-26T22:17:55.802+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_01.run_extract_container_E10 manual__2024-10-26T22:12:23.442491+00:00 [running]> on host bacd1900a50a
+[2024-10-26T22:17:55.903+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_01' AIRFLOW_CTX_TASK_ID='run_extract_container_E10' AIRFLOW_CTX_EXECUTION_DATE='2024-10-26T22:12:23.442491+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-26T22:12:23.442491+00:00'
+[2024-10-26T22:17:55.904+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-26T22:17:55.927+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-26T22:17:55.930+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-26T22:26:59.895+0000] {docker.py:438} INFO - End of process...
+[2024-10-26T22:26:59.901+0000] {docker.py:438} INFO -          Category                         Name  ...    Date_First  Like_First
+[2024-10-26T22:26:59.901+0000] {docker.py:438} INFO - 0         Fantasy               Athena Complex  ...  Nov 18, 2016  like52,305
+[2024-10-26T22:26:59.902+0000] {docker.py:438} INFO - 1         Fantasy                          ROB  ...   Feb 4, 2021  like10,432
+[2024-10-26T22:26:59.902+0000] {docker.py:438} INFO - 2         Fantasy           WEBTOON GREENLiGHT  ...  Apr 24, 2020  like96,024
+[2024-10-26T22:26:59.903+0000] {docker.py:438} INFO - 3   Slice of life                 As Per Usual  ...  Jan 18, 2016  like50,022
+[2024-10-26T22:26:59.903+0000] {docker.py:438} INFO - 4          Comedy              dustinteractive  ...  Dec 23, 2016  like31,958
+[2024-10-26T22:26:59.904+0000] {docker.py:438} INFO - ..            ...                          ...  ...           ...         ...
+[2024-10-26T22:26:59.904+0000] {docker.py:438} INFO - 74  Slice of life  The Life of the Three Bears  ...  Feb 23, 2015   like3,826
+[2024-10-26T22:26:59.905+0000] {docker.py:438} INFO - 75  Slice of life                Jingle Jungle  ...  Aug 27, 2014   like2,084
+[2024-10-26T22:26:59.905+0000] {docker.py:438} INFO - 76         Sci-fi           2015: Space Series  ...  Feb 25, 2015   like8,461
+[2024-10-26T22:26:59.906+0000] {docker.py:438} INFO - 77         Comedy                Library Ghost  ...  Jul 18, 2014  like11,031
+[2024-10-26T22:26:59.906+0000] {docker.py:438} INFO - 78         Comedy                       Epic V  ...   Dec 2, 2014   like1,273
+[2024-10-26T22:26:59.906+0000] {docker.py:438} INFO - 
+[2024-10-26T22:26:59.907+0000] {docker.py:438} INFO - [79 rows x 9 columns]
+[2024-10-26T22:27:00.578+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-26T22:27:00.579+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_01, task_id=run_extract_container_E10, run_id=manual__2024-10-26T22:12:23.442491+00:00, execution_date=20241026T221223, start_date=20241026T221755, end_date=20241026T222700
+[2024-10-26T22:27:00.630+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-26T22:27:00.676+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-26T22:27:00.678+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

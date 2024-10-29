@@ -1,0 +1,36 @@
+[2024-10-08T22:08:47.484+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-08T22:08:47.504+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_etl_004.run_extract_container_E5 manual__2024-10-08T21:51:57.135226+00:00 [queued]>
+[2024-10-08T22:08:47.514+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_etl_004.run_extract_container_E5 manual__2024-10-08T21:51:57.135226+00:00 [queued]>
+[2024-10-08T22:08:47.515+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 7
+[2024-10-08T22:08:47.529+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): run_extract_container_E5> on 2024-10-08 21:51:57.135226+00:00
+[2024-10-08T22:08:47.538+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1374) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T22:08:47.540+0000] {standard_task_runner.py:72} INFO - Started process 1377 to run task
+[2024-10-08T22:08:47.540+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_etl_004', 'run_extract_container_E5', 'manual__2024-10-08T21:51:57.135226+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmpznyug3v5']
+[2024-10-08T22:08:47.541+0000] {standard_task_runner.py:105} INFO - Job 110: Subtask run_extract_container_E5
+[2024-10-08T22:08:47.591+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_etl_004.run_extract_container_E5 manual__2024-10-08T21:51:57.135226+00:00 [running]> on host a4706156eccf
+[2024-10-08T22:08:47.680+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='BB' AIRFLOW_CTX_DAG_ID='dag_etl_004' AIRFLOW_CTX_TASK_ID='run_extract_container_E5' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T21:51:57.135226+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T21:51:57.135226+00:00'
+[2024-10-08T22:08:47.681+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-08T22:08:47.707+0000] {docker.py:367} INFO - Starting docker container from image etl
+[2024-10-08T22:08:47.711+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-08T22:13:08.921+0000] {docker.py:438} INFO - End of process...
+[2024-10-08T22:13:08.939+0000] {docker.py:438} INFO -         Category                         Name  ...    Date_First  Like_First
+[2024-10-08T22:13:08.940+0000] {docker.py:438} INFO - 0        Mystery  Garden Club Detective Squad  ...  Jan 20, 2021  like39,587
+[2024-10-08T22:13:08.940+0000] {docker.py:438} INFO - 1   Supernatural              Flawed Almighty  ...   Nov 7, 2021  like52,831
+[2024-10-08T22:13:08.941+0000] {docker.py:438} INFO - 2        Fantasy           Heavenly Roommates  ...  Aug 11, 2021  like44,467
+[2024-10-08T22:13:08.941+0000] {docker.py:438} INFO - 3         Sci-fi               It Was All You  ...  May 11, 2021  like42,605
+[2024-10-08T22:13:08.941+0000] {docker.py:438} INFO - 4      Superhero                  The Badguys  ...   Jul 5, 2016   like9,866
+[2024-10-08T22:13:08.941+0000] {docker.py:438} INFO - ..           ...                          ...  ...           ...         ...
+[2024-10-08T22:13:08.941+0000] {docker.py:438} INFO - 68      Thriller                    Hellbound  ...  Nov 16, 2021  like27,614
+[2024-10-08T22:13:08.942+0000] {docker.py:438} INFO - 69         Drama                Ghost Theater  ...  Feb 23, 2020  like67,714
+[2024-10-08T22:13:08.942+0000] {docker.py:438} INFO - 70        Sci-fi                     Moon You  ...  Mar 21, 2018  like27,652
+[2024-10-08T22:13:08.942+0000] {docker.py:438} INFO - 71       Mystery              Locker & Opener  ...   Mar 6, 2021  like42,152
+[2024-10-08T22:13:08.942+0000] {docker.py:438} INFO - 72        Action     Land of the Crimson Moon  ...   Jul 5, 2022  like13,101
+[2024-10-08T22:13:08.943+0000] {docker.py:438} INFO - 
+[2024-10-08T22:13:08.943+0000] {docker.py:438} INFO - [73 rows x 9 columns]
+[2024-10-08T22:13:09.391+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-08T22:13:09.392+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_etl_004, task_id=run_extract_container_E5, run_id=manual__2024-10-08T21:51:57.135226+00:00, execution_date=20241008T215157, start_date=20241008T220847, end_date=20241008T221309
+[2024-10-08T22:13:09.429+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-08T22:13:09.453+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-08T22:13:09.455+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

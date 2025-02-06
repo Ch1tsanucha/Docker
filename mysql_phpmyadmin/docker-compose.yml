@@ -9,6 +9,8 @@ services:
       # MYSQL_DATABASE: example_db
       # MYSQL_USER: example_user
       # MYSQL_PASSWORD: example_pass
+    ports:
+      - 3306:3306
     volumes:
       - mysql_data:/var/lib/mysql  # Adds a volume for persistent storage
 
